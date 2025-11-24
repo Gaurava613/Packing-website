@@ -1,0 +1,81 @@
+.footer-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #4c3a2c;
+  /* height: 0rem; */
+}
+
+/* rest of your styles… */
+
+
+/* Dark green premium title */
+.footer-title {
+  font-weight: 700;
+  color: #0f4a26;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+/* headings */
+.footer-heading {
+  color: #3c301f;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+}
+
+/* text */
+.footer-text {
+  color: #5b4739;
+  line-height: 1.4;
+}
+
+/* links */
+.footer-links a {
+  text-decoration: none;
+  color: #4c3a2c;
+  font-size: 0.94rem;
+  transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+  padding-left: 5px;
+  color: #0e6834;
+}
+
+/* gallery images */
+.footer-img {
+  width: 63px;
+  height: 63px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: 0.25s ease;
+}
+.footer-img:hover {
+  transform: scale(1.12);
+}
+
+/* social icons */
+.footer-social i {
+  font-size: 22px;
+  color: #0f4a26;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer-social i:hover {
+  color: #d66b29;
+  transform: scale(1.2);
+}
+
+/* divider */
+.footer-divider {
+  border-color: rgba(0,0,0,0.15);
+}
+
+/* copyright */
+.footer-copy {
+  color: #3b2d1f;
+}

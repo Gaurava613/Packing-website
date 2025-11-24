@@ -1,0 +1,62 @@
+/* Parent styling */
+.process-container{
+        font-family: 'Cormorant Garamond', serif !important;
+
+}
+.step-item {
+  max-width: 320px;
+}
+
+/* Title style (looks elegant like the screenshot) */
+.step-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph text style */
+.step-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Underline link style */
+.step-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #000;
+}
+
+.step-link:hover {
+  color: #b38742; /* premium gold hover color */
+}
+
+/* Circle background for images */
+.step-icon-wrapper {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #f1eee7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .step-title {
+    font-size: 1.5rem;
+  }
+
+  .step-text {
+    font-size: 1rem;
+  }
+
+  .step-icon-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}

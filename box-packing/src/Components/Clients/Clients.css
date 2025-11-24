@@ -1,0 +1,77 @@
+.clients-section {
+  background: radial-gradient(circle at top left, #f4fdf4 0%, #ffffff 40%, #faf5ea 100%);
+  overflow: hidden;
+}
+
+/* small accent text */
+.clients-kicker {
+  letter-spacing: 0.16em;
+  color: #0f6c1d;
+}
+
+.clients-title {
+  font-size: 1.9rem;
+  color: #123024;
+}
+
+/* slider wrapper */
+.clients-slider {
+  overflow: hidden;
+  position: relative;
+  padding-block: 10px;
+}
+
+/* scrolling row */
+.clients-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  animation: clientsScroll 25s linear infinite;
+}
+
+/* each logo */
+.client-logo-wrap {
+  flex: 0 0 auto;
+  opacity: 0.85;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.client-logo-wrap img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
+}
+
+/* hover effect */
+.client-logo-wrap:hover {
+  transform: translateY(-4px) scale(1.03);
+  opacity: 1;
+}
+
+/* keyframes for continuous scroll */
+@keyframes clientsScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* mobile tweaks */
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 1.5rem;
+  }
+
+  .clients-track {
+    gap: 2rem;
+    animation-duration: 18s;
+  }
+
+  .client-logo-wrap img {
+    width: 90px;
+  }
+}

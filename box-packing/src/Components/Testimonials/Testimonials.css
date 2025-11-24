@@ -1,0 +1,187 @@
+.testimonial-wrapper {
+  background: radial-gradient(circle at top left, #f4fdf4 0%, #ffffff 40%, #faf5ea 100%);
+}
+
+/* heading */
+.test-kicker {
+  letter-spacing: 0.16em;
+  color: #0f6c1d;
+}
+
+.test-title {
+  font-size: 2rem;
+  color: #123024;
+}
+
+/* layout */
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* fixed window so buttons never move */
+.testimonial-window {
+  max-width: 900px;
+  overflow: hidden;
+}
+
+/* three cards in a row */
+.testimonial-track {
+  display: flex;
+  gap: 18px;
+}
+
+/* arrow buttons */
+.test-arrow-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #0f6c1d;
+  color: #ffffff;
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.test-arrow-btn:hover {
+  transform: scale(1.08);
+  background: #0c4e15;
+  box-shadow: 0 8px 22px rgba(15, 107, 29, 0.35);
+}
+
+/* testimonial card */
+.testimonial-card {
+  background: #ffffff;
+  width: 260px;
+  min-height: 190px;
+  padding: 1.4rem 1.3rem 1.25rem;
+  border-radius: 1.3rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* quote decoration */
+.test-quote-mark {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  font-size: 3.6rem;
+  color: rgba(16, 76, 31, 0.1);
+  pointer-events: none;
+}
+
+/* text */
+.testimonial-message {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.test-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #e3f5e7;
+  color: #0f6c1d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.test-name {
+  color: #123024;
+}
+
+.test-role {
+  color: #6b7280;
+}
+
+/* stars */
+.test-stars {
+  font-size: 0.95rem;
+  color: #f59e0b;
+}
+
+/* slide animations */
+.slide-from-right {
+  animation: slideFromRight 0.35s ease-out;
+}
+
+.slide-from-left {
+  animation: slideFromLeft 0.35s ease-out;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* mobile tweaks */
+@media (max-width: 992px) {
+  .testimonial-window {
+    max-width: 100%;
+  }
+
+  .testimonial-track {
+    gap: 12px;
+  }
+
+  .testimonial-card {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+  }
+
+  .testimonial-window {
+    width: 100%;
+  }
+
+  .testimonial-track {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .test-arrow-btn {
+    margin: 6px 0;
+  }
+
+  .test-title {
+    font-size: 1.6rem;
+  }
+}

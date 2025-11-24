@@ -1,0 +1,104 @@
+.box3d-section {
+  background: #2c5330;
+  color: #e6d7bf;
+}
+
+.about-info-sec{
+      color: #e6d7bf !important;
+}
+
+/* perspective so cube looks 3D */
+.box3d-wrapper {
+  width: 260px;
+  height: 260px;
+  perspective: 800px;
+}
+
+/* cube base */
+.box3d-cube {
+  width: 200px;
+  height: 1500px;
+  position: relative;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: box3d-rotate 10s infinite linear;
+}
+
+/* all faces */
+.box3d-face {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: #f3d6b0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #13511b;
+}
+
+/* individual faces */
+.box3d-front {
+  transform: translateZ(90px);
+  background: #e8c99e;
+
+}
+
+.box3d-back {
+  transform: rotateY(180deg) translateZ(90px);
+}
+
+.box3d-right {
+  transform: rotateY(90deg) translateZ(90px);
+  background: #e8c99e;
+}
+
+.box3d-left {
+  transform: rotateY(-90deg) translateZ(90px);
+  background: #e6d7bf;
+}
+
+.box3d-top {
+  transform: rotateX(90deg) translateZ(90px);
+  background: #fbdfb7;
+}
+
+.box3d-bottom {
+  transform: rotateX(-90deg) translateZ(90px);
+  background: #e8c99e;
+}
+
+/* rotation animation */
+@keyframes box3d-rotate {
+  0% {
+    transform: rotateX(-22deg) rotateY(-30deg);
+  }
+  50% {
+    transform: rotateX(25deg) rotateY(150deg);
+  }
+  100% {
+    transform: rotateX(-22deg) rotateY(330deg);
+  }
+}
+
+/* small screen tweaks */
+@media (max-width: 576px) {
+  .box3d-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .box3d-cube {
+    width: 120px;
+    height: 120px;
+  }
+
+  .box3d-face {
+    width: 180px;
+    height: 180px;
+  }
+}

@@ -1,0 +1,34 @@
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-brand {
+  color: var(--school-primary) !important;
+  letter-spacing: 0.03em;
+}
+
+.navbar-brand:hover {
+  color: var(--school-accent) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #4b5563 !important;
+}
+
+.nav-link-active {
+  color: var(--school-primary) !important;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--school-primary), var(--school-accent));
+}
